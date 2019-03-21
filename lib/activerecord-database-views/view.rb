@@ -26,6 +26,10 @@ module ActiveRecord::DatabaseViews
       end
     end
 
+    def exists?
+      ActiveRecord::Base.connection.table_exists? name
+    end
+
     private
 
     def basename
@@ -47,5 +51,6 @@ module ActiveRecord::DatabaseViews
     def call_sql!(sql)
       ActiveRecord::Base.connection.execute(sql)
     end
+
   end
 end
