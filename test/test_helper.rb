@@ -1,5 +1,5 @@
 require 'bundler/setup'
 require 'minitest/autorun'
-require 'mocha/test_unit'
+require 'mocha/minitest'
 require 'active_record'
 require 'activerecord-database-views'
